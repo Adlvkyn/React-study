@@ -1,0 +1,13 @@
+.profileWall img{
+    width: 800px;
+    height: 300px;
+}
+
+.profileInfo img{
+    width: 100px;
+    height: 100px;
+}
+
+.profileInfo{
+    padding: 10px;
+}

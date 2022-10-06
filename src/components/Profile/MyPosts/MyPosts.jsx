@@ -2,18 +2,22 @@ import React from 'react';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+
+  let postsArr = props.state.posts.map(p => <Post message={p.post} likes={p.likes} />)
+
   return (
-    <div>
-      my posts
+    <div className={s.postsBlock}>
       <div>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <button>Add post</button>
-        <button>Remove</button>
+        <div>
+          <textarea />
+        </div>
+        <div>
+          <button>Add post</button>
+        </div>
       </div>
       <div>
-        <Post message={"Hello, it's my first post"} likes={"51"}/>
-        <Post message={"My name is Nurgissa, i am from Almaty"} likes={"29"}/>
+        {postsArr}
       </div>
     </div>
   );
